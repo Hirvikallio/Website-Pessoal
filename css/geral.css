@@ -1,0 +1,68 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body::before {
+    --size: 0;
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle closest-side, rgb(235, 58, 87), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body:hover::before {
+    --size: 100px;
+    left: var(--x);
+    top: var(--y);
+}
+
+.container {
+    height: 100vh;
+    /* Adjust as needed */
+    /* Other container styles go here */
+}
+
+
+/* mudar cor do texto */
+.color-changing-text {
+    color: #6f6f6f;
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    /* Center the text at the top */
+    position: relative;
+    left: 60%;
+
+}
+
+
+.color-changing-text:hover {
+    color: #ff214f;
+}
+
+/*Transition*/
+* {
+    transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+    -ms-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+}
