@@ -7,3 +7,18 @@ document.addEventListener('mousemove', function (e) {
     document.documentElement.style.setProperty('--y', y + 'vh');
 });
 
+
+// Select elements by class 'gradient'
+const gradients = document.querySelectorAll('.gradient');
+
+// Add event listeners to each gradient
+gradients.forEach((gradient) => {
+    gradient.addEventListener('mouseenter', () => {
+        gradient.style.transform = 'scale(4)';
+    });
+
+    gradient.addEventListener('mouseleave', () => {
+        gradient.style.transform = 'scale(1)';
+    });
+});
+
