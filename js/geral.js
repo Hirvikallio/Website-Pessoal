@@ -22,3 +22,18 @@ gradients.forEach((gradient) => {
     });
 });
 
+
+document.addEventListener('mousemove', (event) => {
+    windowWidth = window.innerWidth;
+    windowHeight = window.innerHeight;
+  
+    mouseXpercentage = Math.round((event.pageX / windowWidth) * 100);
+    mouseYpercentage = Math.round((event.pageY / windowHeight) * 100);
+  
+    document.querySelector('body').style.background =
+      'radial-gradient(at ' +
+      mouseXpercentage +
+      '% ' +
+      mouseYpercentage +
+      '%, #3498db, #2ecc71, #e74c3c, #f39c12, #8e44ad)';
+});
