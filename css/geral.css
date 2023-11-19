@@ -11,7 +11,7 @@ body{
 }
 
 
-/* gradiente que segue o rato */
+/* gradiente que segue o rato 
 body::before {
     --size: 0;
     content: '';
@@ -22,7 +22,7 @@ body::before {
     height: 15%;
     background: radial-gradient(circle closest-side, rgb(235, 58, 87), transparent);
     transform: translate(-50%, -50%);
-    transition: width 0.2s ease, height 0.2s ease, left 0.1s ease, top 0.1s ease; /* Transition with a delay for left and top */
+    transition: width 0.2s ease, height 0.2s ease, left 0.1s ease, top 0.1s ease; 
     z-index: -1;
     pointer-events: none;
 }
@@ -31,7 +31,7 @@ body:hover::before {
     --size: 100px;
     left: var(--x);
     top: var(--y);
-}
+}   */
 
 /* mudar cor do texto */
 .color-changing-text {
@@ -103,3 +103,5 @@ h1{
 p {
     margin: 10px 0; /* Adjust margin as needed */
 }
+
+
