@@ -6,11 +6,7 @@ body {
     overflow: hidden;
 }
 
-body{
-    background-color: #F2DDC0;  
-}
-
-
+ 
 /* gradiente que segue o rato 
 body::before {
     --size: 0;
@@ -67,8 +63,17 @@ body:hover::before {
 
 
 h1{
-   
+ 
 }
+
+
+.text-container p {
+    text-align: center;
+    margin: 300px; /* Adjust margin as needed */
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
 
 .gradient {
     --size: 0;
@@ -94,14 +99,5 @@ h1{
 
 }
 
-
-.text-container {
-    text-align: center;
-    margin: 20px; /* Adjust margin as needed */
-}
-
-p {
-    margin: 10px 0; /* Adjust margin as needed */
-}
 
 
