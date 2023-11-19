@@ -2,7 +2,7 @@ html,
 body {
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0;  
     overflow: hidden;
 }
 
@@ -12,11 +12,11 @@ body::before {
     position: fixed;
     left: 0;
     top: 0;
-    width: 50%;
-    height: 50%;
+    width: 15%;
+    height: 15%;
     background: radial-gradient(circle closest-side, rgb(235, 58, 87), transparent);
     transform: translate(-50%, -50%);
-    transition: width 0.2s ease, height 0.2s ease;
+    transition: width 0.2s ease, height 0.2s ease, left 0.1s ease, top 0.1s ease; /* Transition with a delay for left and top */
     z-index: -1;
     pointer-events: none;
 }
@@ -65,4 +65,10 @@ body:hover::before {
     -moz-transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
     -o-transition-duration: 0.4s;
+}
+
+
+h1{
+
+    
 }
