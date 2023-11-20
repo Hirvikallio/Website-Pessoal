@@ -75,6 +75,16 @@ h1{
 }
 
 
+.portfolio_img {
+    position: absolute;
+    top: 54%;
+    left: 52%;
+    width: 90px;
+    height: 90px;
+    transition: transform 0.3s ease;
+    z-index: 1; /* Set a higher z-index for the image to place it on top of the gradient */
+}
+
 .gradient {
     --size: 0;
     content: '';
@@ -82,11 +92,11 @@ h1{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background: radial-gradient(circle closest-side, rgb(235, 58, 87), transparent);
     transition: transform 0.3s ease;
-   
+    z-index: 0; /* Set a lower z-index for the gradient */
 }
 
 
@@ -98,3 +108,4 @@ h1{
     background: radial-gradient(circle closest-side, rgb(1, 38, 248), transparent);
 
 }
+

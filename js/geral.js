@@ -6,26 +6,35 @@ document.addEventListener('mousemove', function (e) {
     document.documentElement.style.setProperty('--x', x + 'vw');
     document.documentElement.style.setProperty('--y', y + 'vh');
 });   */
+
 document.addEventListener('DOMContentLoaded', function () {
     // Select elements by class 'gradient'
     const gradients = document.querySelectorAll('.gradient');
     const textContainer = document.querySelector('.text-container');
+    const image = document.querySelector('.portfolio_img'); // Replace with your actual class name
 
     // Add event listeners to each gradient
     gradients.forEach((gradient) => {
         gradient.addEventListener('mouseenter', () => {
             gradient.style.transform = 'scale(4)';
-            // Change text color on hover
-            textContainer.style.color = getTextColor(gradient.id);
+            if (gradient.id === 'hoverGradient') {
+                image.style.transform = 'scale(2)';
+                // Change text color on hover
+                textContainer.style.color = getTextColor(gradient.id);
+            }
         });
 
         gradient.addEventListener('mouseleave', () => {
             gradient.style.transform = 'scale(1)';
+            image.style.transform = 'scale(1)';
             // Reset text color on mouse leave
             textContainer.style.color = '';
         });
     });
 
+
+
+    /*  mudar cor do texto */ 
     // Function to get text color based on gradient ID
     function getTextColor(gradientId) {
         switch (gradientId) {
