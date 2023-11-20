@@ -4,7 +4,31 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    cursor: none;
+  /*  cursor: none;   */
+}
+
+svg {
+  width: 150px;
+  position: absolute;
+  animation: rotation 4.5s infinite linear;
+  pointer-events: none;
+  transition-timing-function: ease-out;
+}
+
+text {
+  font-size: 4em;
+  font-family: 'Poppins';
+  font-weight: bold;
+  fill: rgb(138, 175, 255)
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 
@@ -109,43 +133,3 @@ h1 {}
 
 }
 
-
-
-
-
-.cursor--small,
-.cursor--large,
-.cursor--text {
-  position: fixed;
-  left: 0;
-  top: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  width: var(--cursor-size);
-  height: var(--cursor-size);
-  mix-blend-mode: difference;
-  pointer-events: none;
-  user-select: none;
-}
-
-.cursor--text {
-  --cursor-size: fit-content;
-  font-size: 0.75rem;
-  color: #fff;
-  opacity: 0;
-}
-
-.cursor--text .text {
-  font-family: sans-serif;
-  font-weight: bold;
-}
-
-.cursor--small {
-  --cursor-size: 20px;
-  background: #fff;
-}
-
-.cursor--large {
-  --cursor-size: 60px;
-  border: 2px solid #fff;
-}

@@ -62,3 +62,28 @@ document.addEventListener('mousemove', (event) => {
 });
 
 
+
+/* animação do circulo com texto */
+const circleSvg = document.querySelector('svg')
+
+let mouseX = 0
+let mouseY = 0
+
+
+window.addEventListener('mousemove', (event) => {
+
+    mouseY = (event.clientY / 16) - (45 / 10) + 'rem'
+    mouseX = (event.clientX / 16) - (45 / 10) + 'rem'
+})
+
+const mouseMove = () => {
+
+    
+    circleSvg.style.top = mouseY
+    circleSvg.style.left = mouseX
+
+    window.requestAnimationFrame(mouseMove)
+}
+
+mouseMove()
+
