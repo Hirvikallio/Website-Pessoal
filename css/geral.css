@@ -50,7 +50,6 @@ body:hover::before {
 }
 
 
-/*Transition*/
 * {
     transition-timing-function: ease-in-out;
     -ms-transition-timing-function: ease-in-out;
@@ -71,7 +70,6 @@ h1 {}
 .text-container p {
     text-align: center;
     margin: 300px;
-    /* Adjust margin as needed */
     padding-left: 100px;
     padding-right: 100px;
 }
@@ -85,7 +83,6 @@ h1 {}
     height: 70px;
     transition: transform 0.3s ease;
     z-index: 1;
-    /* Set a higher z-index for the image to place it on top of the gradient */
 }
 
 .gradient {
@@ -100,7 +97,6 @@ h1 {}
     background: radial-gradient(circle closest-side, rgb(235, 58, 87), transparent);
     transition: transform 0.3s ease;
     z-index: 0;
-    /* Set a lower z-index for the gradient */
 }
 
 
@@ -114,89 +110,40 @@ h1 {}
 }
 
 
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.cursor--small,
+.cursor--large,
+.cursor--text {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  user-select: none;
 }
 
-main {
-
-    .links {
-        @include flex-center();
-
-        .link {
-            --color: rgba(255, 255, 255, 0.5);
-
-            position: relative;
-            font-size: 0.95rem;
-            font-family: "Sainte Colombe";
-            text-decoration: none;
-            color: var(--color);
-            margin: 2rem;
-            cursor: none;
-            transition: color 300ms ease;
-
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                height: 1px;
-                background: rgb(255, 255, 255);
-                transform-origin: right;
-                transform: scaleX(0);
-                transition: transform 300ms ease;
-            }
-
-            &:hover {
-                --color: rgb(255, 255, 255);
-
-                &::after {
-                    transform-origin: left;
-                    transform: scaleX(1);
-                }
-            }
-        }
-    }
-
+.cursor--text {
+  --cursor-size: fit-content;
+  font-size: 0.75rem;
+  color: #fff;
+  opacity: 0;
 }
 
-.cursor {
-	.cursor--small,
-	.cursor--large,
-	.cursor--text {
-		position: fixed;
-		left: 0;
-		top: 0;
-		transform: translate(-50%, -50%);
-		border-radius: 50%;
-		width: var(--cursor-size);
-		height: var(--cursor-size);
-		mix-blend-mode: difference;
-		pointer-events: none;
-		user-select: none;
-	}
+.cursor--text .text {
+  font-family: sans-serif;
+  font-weight: bold;
+}
 
-	.cursor--text {
-		--cursor-size: fit-content;
-		font-size: 0.75rem;
-		color: #fff;
-		opacity: 0;
-		.text {
-			font-family: sans-serif;
-			font-weight: bold;
-		}
-	}
+.cursor--small {
+  --cursor-size: 20px;
+  background: #fff;
+}
 
-	.cursor--small {
-		--cursor-size: 20px;
-		background: #fff;
-	}
-
-	.cursor--large {
-		--cursor-size: 60px;
-		border: 2px solid #fff;
-	}
+.cursor--large {
+  --cursor-size: 60px;
+  border: 2px solid #fff;
 }

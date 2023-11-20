@@ -8,18 +8,17 @@ document.addEventListener('mousemove', function (e) {
 });   */
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Select elements by class 'gradient'
+
     const gradients = document.querySelectorAll('.gradient');
     const textContainer = document.querySelector('.text-container');
-    const image = document.querySelector('.portfolio_img'); // Replace with your actual class name
+    const image = document.querySelector('.portfolio_img'); 
 
-    // Add event listeners to each gradient
     gradients.forEach((gradient) => {
         gradient.addEventListener('mouseenter', () => {
             gradient.style.transform = 'scale(4)';
             if (gradient.id === 'hoverGradient') {
                 image.style.transform = 'scale(2)';
-                // Change text color on hover
+      
                 textContainer.style.color = getTextColor(gradient.id);
             }
         });
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         gradient.addEventListener('mouseleave', () => {
             gradient.style.transform = 'scale(1)';
             image.style.transform = 'scale(1)';
-            // Reset text color on mouse leave
+            
             textContainer.style.color = '';
         });
     });
@@ -35,14 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     /*  mudar cor do texto */ 
-    // Function to get text color based on gradient ID
+
     function getTextColor(gradientId) {
         switch (gradientId) {
             case 'hoverGradient':
-                return '#ff214f'; // Set the desired text color for this gradient
+                return '#ff214f'; 
             case 'hoverGradient1':
-                return 'rgb(1, 38, 248)'; // Set the desired text color for this gradient
-            // Add more cases for additional gradients if needed
+                return 'rgb(1, 38, 248)'; 
             default:
                 return '';
         }
