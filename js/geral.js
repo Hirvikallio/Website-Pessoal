@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         gradient.addEventListener('mouseleave', () => {
             gradient.style.transform = 'scale(1)';
             image.style.transform = 'scale(1)';
-            textContainer.style.color = '';
+            textContainer.style.color = 'rgb(255,255,255)';
         });
     });
 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             case 'hoverGradient1':
                 return 'rgb(1, 38, 248)'; // Blue 
             default:
-                return '';
+                return 'rgb(255,255,255)';
         }
     }
 });
@@ -58,7 +58,7 @@ document.addEventListener('mousemove', (event) => {
         mouseXpercentage +
         '% ' +
         mouseYpercentage +
-        '%, #d9d9d9, #8b8b8b, #444444, #000000)';
+        '%, #c6c6c6, #919191, #5e5e5e, #303030, #000000)';
 });
 
 

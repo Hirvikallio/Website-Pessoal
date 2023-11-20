@@ -31,6 +31,43 @@ text {
   }
 }
 
+/* fonts */
+@import url(https://db.onlinewebfonts.com/c/55d433372d270829c51e2577a78ef12d?family=Monument+Extended+Bold);
+
+@font-face {
+  font-family: "Monument Extended Bold";
+  src: url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.eot");
+  src: url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.svg#Monument Extended Bold")format("svg");
+}
+
+
+h1 {   
+ 
+  margin-top:5%;
+  margin-left:4%;
+  font-family: "Monument Extended Bold";
+  color: white;
+  text-align:left;
+  font-size: 5rem;
+  color: #919090;
+}
+
+.color-changing-text:hover {
+  color: #000000;
+}
+
+
+.text-container p {
+  text-align: center;
+  margin: 300px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 
 /* gradiente que segue o rato 
 body::before {
@@ -55,25 +92,6 @@ body:hover::before {
 }   */
 
 
-
-/* mudar cor do texto */
-.color-changing-text {
-    color: #6f6f6f;
-    font-weight: bold;
-    font-size: 50px;
-    text-transform: capitalize;
-    cursor: pointer;
-    /* Center the text at the top */
-    position: relative;
-    left: 60%;
-
-}
-
-.color-changing-text:hover {
-    color: #ff214f;
-}
-
-
 * {
     transition-timing-function: ease-in-out;
     -ms-transition-timing-function: ease-in-out;
@@ -85,17 +103,6 @@ body:hover::before {
     -moz-transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
     -o-transition-duration: 0.4s;
-}
-
-
-h1 {}
-
-
-.text-container p {
-    text-align: center;
-    margin: 300px;
-    padding-left: 100px;
-    padding-right: 100px;
 }
 
 
@@ -125,11 +132,23 @@ h1 {}
 
 
 #hoverGradient1 {
-    top: 20%;
-    left: 20%;
-    width: 100px;
-    height: 100px;
+    top: 25%;
+    left: 80%;
+    width: 150px;
+    height: 150px;
     background: radial-gradient(circle closest-side, rgb(1, 38, 248), transparent);
 
 }
+
+#hoverGradient2 {
+  top: 70%;
+  left: 60%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle closest-side, rgb(166, 1, 248), transparent);
+
+}
+
+
+
 
