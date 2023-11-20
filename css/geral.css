@@ -13,13 +13,18 @@ svg {
   animation: rotation 4.5s infinite linear;
   pointer-events: none;
   transition-timing-function: ease-out;
+  z-index: 1; 
+}
+
+#circle-svg {
+  display: none;
 }
 
 text {
   font-size: 4em;
   font-family: 'Poppins';
   font-weight: bold;
-  fill: rgb(138, 175, 255)
+  fill: rgb(0, 0, 0)
 }
 
 @keyframes rotation {
@@ -145,7 +150,7 @@ body:hover::before {
   left: 60%;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle closest-side, rgb(166, 1, 248), transparent);
+  background: radial-gradient(circle closest-side, rgb(137, 1, 248), transparent);
 
 }
 

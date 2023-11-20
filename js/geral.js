@@ -63,27 +63,35 @@ document.addEventListener('mousemove', (event) => {
 
 
 
-/* animação do circulo com texto */
-const circleSvg = document.querySelector('svg')
+const circleSvg = document.getElementById('circle-svg');
 
-let mouseX = 0
-let mouseY = 0
+let mouseX = 0;
+let mouseY = 0;
 
+const portfolioImage = document.querySelector('.portfolio_img');
+
+portfolioImage.addEventListener('mouseenter', () => {
+    // Show the SVG on mouseover
+    circleSvg.style.display = 'block';
+});
+
+portfolioImage.addEventListener('mouseleave', () => {
+    // Hide the SVG on mouseout
+    circleSvg.style.display = 'none';
+});
 
 window.addEventListener('mousemove', (event) => {
-
-    mouseY = (event.clientY / 16) - (45 / 10) + 'rem'
-    mouseX = (event.clientX / 16) - (45 / 10) + 'rem'
-})
+    // Update mouse coordinates
+    mouseY = (event.clientY / 16) - (45 / 10) + 'rem';
+    mouseX = (event.clientX / 16) - (45 / 10) + 'rem';
+});
 
 const mouseMove = () => {
+    // Update SVG position
+    circleSvg.style.top = mouseY;
+    circleSvg.style.left = mouseX;
 
-    
-    circleSvg.style.top = mouseY
-    circleSvg.style.left = mouseX
-
-    window.requestAnimationFrame(mouseMove)
+    window.requestAnimationFrame(mouseMove);
 }
 
-mouseMove()
-
+mouseMove();
