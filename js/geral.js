@@ -7,40 +7,37 @@ document.addEventListener('mousemove', function (e) {
     document.documentElement.style.setProperty('--y', y + 'vh');
 });   */
 
+
 document.addEventListener('DOMContentLoaded', function () {
 
     const gradients = document.querySelectorAll('.gradient');
     const textContainer = document.querySelector('.text-container');
-    const image = document.querySelector('.portfolio_img'); 
+    const image = document.querySelector('.portfolio_img');
 
     gradients.forEach((gradient) => {
         gradient.addEventListener('mouseenter', () => {
             gradient.style.transform = 'scale(4)';
+            textContainer.style.color = getTextColor(gradient.id);
+
             if (gradient.id === 'hoverGradient') {
                 image.style.transform = 'scale(2)';
-      
-                textContainer.style.color = getTextColor(gradient.id);
             }
         });
 
         gradient.addEventListener('mouseleave', () => {
             gradient.style.transform = 'scale(1)';
             image.style.transform = 'scale(1)';
-            
             textContainer.style.color = '';
         });
     });
 
-
-
-    /*  mudar cor do texto */ 
-
+    /* mudar cor do texto */
     function getTextColor(gradientId) {
         switch (gradientId) {
             case 'hoverGradient':
-                return '#ff214f'; 
+                return '#ff214f'; // Pink 
             case 'hoverGradient1':
-                return 'rgb(1, 38, 248)'; 
+                return 'rgb(1, 38, 248)'; // Blue 
             default:
                 return '';
         }
