@@ -63,12 +63,14 @@ document.addEventListener('mousemove', (event) => {
 
 
 
+/* animação do circulo */
+
 const circleSvg = document.getElementById('circle-svg');
 
 let mouseX = 0;
 let mouseY = 0;
 
-const portfolioImage = document.querySelector('.portfolio_img');
+const portfolioImage = document.querySelector('.portfolio_png');
 
 portfolioImage.addEventListener('mouseenter', () => {
     // Show the SVG on mouseover

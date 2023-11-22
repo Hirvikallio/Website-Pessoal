@@ -110,16 +110,27 @@ body:hover::before {
     -o-transition-duration: 0.4s;
 }
 
-
-.portfolio_img {
+/* socials */
+.portfolio_png {
     position: absolute;
-    top: 54%;
-    left: 52%;
+    top: 55%;
+    left: 52.5%;
     width: 70px;
     height: 70px;
     transition: transform 0.3s ease;
     z-index: 1;
 }
+
+.behance_png {
+  position: absolute;
+  top: 32%;
+  left: 82.5%;
+  width: 75px;
+  height: 45px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
 
 .gradient {
     --size: 0;
