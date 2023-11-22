@@ -8,7 +8,7 @@ body {
 }
 
 svg {
-  width: 150px;
+  width: 170px;
   position: absolute;
   animation: rotation 4.5s infinite linear;
   pointer-events: none;
@@ -110,10 +110,11 @@ body:hover::before {
     -o-transition-duration: 0.4s;
 }
 
-/* socials */
+
+/*---------------------------- socials----------------------- */
 .portfolio_png {
     position: absolute;
-    top: 55%;
+    top: 35.5%;
     left: 52.5%;
     width: 70px;
     height: 70px;
@@ -131,13 +132,23 @@ body:hover::before {
   z-index: 1;
 }
 
+.linkedin_png {
+  position: absolute;
+  top: 72%;
+  left: 73%;
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
 
 .gradient {
     --size: 0;
     content: '';
     border-radius: 50%;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     width: 150px;
     height: 150px;
@@ -157,8 +168,8 @@ body:hover::before {
 }
 
 #hoverGradient2 {
-  top: 70%;
-  left: 60%;
+  top: 67%;
+  left: 70%;
   width: 150px;
   height: 150px;
   background: radial-gradient(circle closest-side, rgb(137, 1, 248), transparent);
