@@ -63,22 +63,42 @@ document.addEventListener('mousemove', (event) => {
 
 
 
-/* animação do circulo */
-
 const circleSvg = document.getElementById('circle-svg');
+const portfolioImage = document.querySelector('.portfolio_png');
+const behanceImage = document.querySelector('.behance_png');
+const behanceText = document.querySelector('.behance-text');
+const portfolioText = document.querySelector('.portfolio-text');
 
 let mouseX = 0;
 let mouseY = 0;
 
-const portfolioImage = document.querySelector('.portfolio_png');
-
 portfolioImage.addEventListener('mouseenter', () => {
-    // Show the SVG on mouseover
+    // Show the Portfolio text and SVG on Portfolio image hover
+    portfolioText.style.display = 'block';
     circleSvg.style.display = 'block';
+
+    // Hide the Behance text on Portfolio image hover
+    behanceText.style.display = 'none';
 });
 
 portfolioImage.addEventListener('mouseleave', () => {
-    // Hide the SVG on mouseout
+    // Hide the Portfolio text and SVG on Portfolio image mouseout
+    portfolioText.style.display = 'none';
+    circleSvg.style.display = 'none';
+});
+
+behanceImage.addEventListener('mouseenter', () => {
+    // Show the Behance text and SVG on Behance image hover
+    behanceText.style.display = 'block';
+    circleSvg.style.display = 'block';
+
+    // Hide the Portfolio text on Behance image hover
+    portfolioText.style.display = 'none';
+});
+
+behanceImage.addEventListener('mouseleave', () => {
+    // Hide the Behance text and SVG on Behance image mouseout
+    behanceText.style.display = 'none';
     circleSvg.style.display = 'none';
 });
 
@@ -86,14 +106,11 @@ window.addEventListener('mousemove', (event) => {
     // Update mouse coordinates
     mouseY = (event.clientY / 16) - (45 / 10) + 'rem';
     mouseX = (event.clientX / 16) - (45 / 10) + 'rem';
-});
 
-const mouseMove = () => {
     // Update SVG position
     circleSvg.style.top = mouseY;
     circleSvg.style.left = mouseX;
+});
 
-    window.requestAnimationFrame(mouseMove);
-}
-
-mouseMove();
+// Optional: Hide the SVG initially
+circleSvg.style.display = 'none';
