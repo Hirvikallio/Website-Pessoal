@@ -18,177 +18,88 @@
 </head>
 
 <body>
-    <header>
-        <nav>
 
-        </nav>
-    </header>
-    
-    <script src="js/paper-full.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var values = {
-                friction: 0.8,
-                timeStep: 0.01,
-                amount: 15,
-                mass: 2,
-                count: 0
-            };
-            values.invMass = 1 / values.mass;
+        <svg id="circle-svg" xmlns="http://www.w3.org/2000/svg" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 500 500">
 
-            var path, springs;
-            var size = view.size * [1.2, 1];
-
-            var Spring = function (a, b, strength, restLength) {
-                this.a = a;
-                this.b = b;
-                this.restLength = restLength || 80;
-                this.strength = strength ? strength : 0.55;
-                this.mamb = values.invMass * values.invMass;
-            };
-
-            Spring.prototype.update = function () {
-                var delta = this.b - this.a;
-                var dist = delta.length;
-                var normDistStrength = (dist - this.restLength) /
-                    (dist * this.mamb) * this.strength;
-                delta.y *= normDistStrength * values.invMass * 0.2;
-                if (!this.a.fixed)
-                    this.a.y += delta.y;
-                if (!this.b.fixed)
-                    this.b.y -= delta.y;
-            };
-
-            function createPath(strength) {
-                path = new Path({
-                    fillColor: 'black'
-                });
-                springs = [];
-                for (var i = 0; i <= values.amount; i++) {
-                    var segment = path.add(new Point(i / values.amount, 0.5) * size);
-                    var point = segment.point;
-                    if (i == 0 || i == values.amount)
-                        point.y += size.height;
-                    point.px = point.x;
-                    point.py = point.y;
-                    // The first two and last two points are fixed:
-                    point.fixed = i < 2 || i > values.amount - 2;
-                    if (i > 0) {
-                        var spring = new Spring(segment.previous.point, point, strength);
-                        springs.push(spring);
-                    }
-                }
-                path.position.x -= size.width / 4;
-                return path;
-            }
-
-            function onResize() {
-                if (path)
-                    path.remove();
-                size = view.bounds.size * [2, 1];
-                path = createPath(0.1);
-            }
-
-            function onFrame(event) {
-                updateWave(path);
-            }
-
-            function updateWave(path) {
-                var force = 1 - values.friction * values.timeStep * values.timeStep;
-                for (var i = 0, l = path.segments.length; i < l; i++) {
-                    var point = path.segments[i].point;
-                    var dy = (point.y - point.py) * force;
-                    point.py = point.y;
-                    point.y = Math.max(point.y + dy, 0);
-                }
-
-                for (var j = 0, l = springs.length; j < l; j++) {
-                    springs[j].update();
-                }
-                path.smooth({ type: 'continuous' });
-            }
-
-            // Attach onResize and onFrame functions to the Paper.js view
-            paper.view.onResize = onResize;
-            paper.view.onFrame = onFrame;
-
-            // Initialize the path and springs
-            path = createPath(0.1);
-        });
-    </script>
-
-    
-
-    <svg id="circle-svg" xmlns="http://www.w3.org/2000/svg" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 500 500">
-
-        <defs>
-            <path id="textcircle" d="M250,400
+            <defs>
+                <path id="textcircle" d="M250,400
                 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z" transform="rotate(12,250,250)" />
-        </defs>
-        <rect width="100%" height="100%" fill="none" />
-        <text class="portfolio-text">
-            <textPath xlink:href="#textcircle" aria-label="All for One &amp; One for All" textLength="942">PORTFOLIO.
-                PORTFOLIO.</textPath>
-        </text>
+            </defs>
+            <rect width="100%" height="100%" fill="none" />
+            <text class="portfolio-text">
+                <textPath xlink:href="#textcircle" aria-label="All for One &amp; One for All" textLength="942">
+                    PORTFOLIO.
+                    PORTFOLIO.</textPath>
+            </text>
 
 
-        <text class="behance-text">
-            <textPath xlink:href="#textcircle" aria-label="All for One &amp; One for All" textLength="942">BEHANCE.
-                BEHANCE.</textPath>
-        </text>
+            <text class="behance-text">
+                <textPath xlink:href="#textcircle" aria-label="All for One &amp; One for All" textLength="942">BEHANCE.
+                    BEHANCE.</textPath>
+            </text>
 
 
-        <text class="linkedin-text">
-            <textPath xlink:href="#textcircle" aria-label="All for One &amp; One for All" textLength="942">LINKEDIN.
-                LINKEDIN.</textPath>
-        </text>
-    </svg>
+            <text class="linkedin-text">
+                <textPath xlink:href="#textcircle" aria-label="All for One &amp; One for All" textLength="942">LINKEDIN.
+                    LINKEDIN.</textPath>
+            </text>
+        </svg>
 
 
-    <h1 class="color-changing-text animate__animated animate__flash">Carolina <br> Simões</h1>
+        <h1 class="color-changing-text animate__animated animate__flash">Carolina <br> Simões</h1>
 
 
-    <div class="socials">
+        <div class="socials">
+            <div class="portfolio">
+                <a href="https://drive.google.com/file/d/1353v0fW61r9KIjP34PsrQbnvFIsoP193/view?usp=sharing"
+                    target="_blank" rel="noopener">
+                    <img width="200" height="200" src="icons/portfolio.png" alt="Check my portfolio"
+                        class="portfolio_png">
+                </a>
+            </div>
 
-        <a href="mailto:carolinahirvikallio1@gmail.com" class="link" target="_blank" rel="noopener" id="email">
-            <img width="200" height="200" src="icons/email.png" alt="Send an email" class="email_png">
-        </a>
+            <div class="behance">
+                <a href="https://www.behance.net/carolinasimes153" target="_blank" rel="noopener">
+                    <img width="200" height="127" src="icons/behance.png" alt="Check my behance" class="behance_png">
+                </a>
+            </div>
 
-        <a href="https://drive.google.com/file/d/1353v0fW61r9KIjP34PsrQbnvFIsoP193/view?usp=sharing" target="_blank"
-            rel="noopener">
-            <img width="200" height="200" src="icons/portfolio.png" alt="Check my portfolio" class="portfolio_png">
-        </a>
+            <div class="linkedin">
+                <a href="https://www.linkedin.com/in/carolina-sim%C3%B5es-136b02278" target="_blank" rel="noopener">
+                    <img width="200" height="200" src="icons/linkedin.png" alt="Check my linkedin" class="linkedin_png">
+                </a>
+            </div>
+
+            <div class="email">
+                <a href="mailto:carolinahirvikallio1@gmail.com" class="link" target="_blank" rel="noopener" id="email">
+                    <img width="200" height="200" src="icons/email.png" alt="Send an email" class="email_png">
+                </a>
+            </div>
+        </div>
+
+        <div class="text-container">
+
+            <p>
+                Welcome! My name is Carolina, i'm 21 years old and i'm taking the course of master's degree in Design
+                and
+                Multimedia at the University of Coimbra. I really enjoy graphic design and design in general, and
+                besides
+                university i love taking photos, listening to music, and going for walks.
 
 
-        <a href="https://www.behance.net/carolinasimes153" target="_blank" rel="noopener">
-            <img width="200" height="127" src="icons/behance.png" alt="Check my behance" class="behance_png">
-        </a>
+                Explore the page and get to know me a bit better and check out my work. Feel free to contact me anytime!
 
+            </p>
+        </div>
 
-        <a href="https://www.linkedin.com/in/carolina-sim%C3%B5es-136b02278" target="_blank" rel="noopener">
-            <img width="200" height="200" src="icons/linkedin.png" alt="Check my linkedin" class="linkedin_png">
-        </a>
+        
+ 
 
+        <div class="gradient " id="hoverGradient"></div>
+        <div class="gradient" id="hoverGradient1"></div>
+        <div class="gradient" id="hoverGradient2"></div>
 
-    </div>
-
-    <div class="text-container">
-
-        <p>
-            Welcome! My name is Carolina, i'm 21 years old and i'm taking the course of master's degree in Design and
-            Multimedia at the University of Coimbra. I really enjoy graphic design and design in general, and besides
-            university i love taking photos, listening to music, and going for walks.
-
-
-            Explore the page and get to know me a bit better and check out my work. Feel free to contact me anytime!
-
-        </p>
-    </div>
-
-    <div class="gradient " id="hoverGradient"></div>
-    <div class="gradient" id="hoverGradient1"></div>
-    <div class="gradient" id="hoverGradient2"></div>
 
     <script src="js/geral.js"></script>
 </body>
