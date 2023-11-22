@@ -66,11 +66,16 @@ h1 {
 }
 
 
+
+.text-container {
+  width: 35%; /* Adjust as needed */
+}
+
 .text-container p {
-  text-align: center;
-  margin: 300px;
-  padding-left: 100px;
-  padding-right: 100px;
+  text-align: left;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.3rem; 
+  margin-left:13%;
 }
 
 
@@ -140,6 +145,15 @@ body:hover::before {
   height: 70px;
   transition: transform 0.3s ease;
   z-index: 1;
+}
+
+.email_png{
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 70px;
+  height: 70px;
+
 }
 
 

@@ -9,7 +9,6 @@ document.addEventListener('mousemove', function (e) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-
     const gradients = document.querySelectorAll('.gradient');
     const textContainer = document.querySelector('.text-container');
     const image = document.querySelector('.portfolio_img');
@@ -27,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         gradient.addEventListener('mouseleave', () => {
             gradient.style.transform = 'scale(1)';
             image.style.transform = 'scale(1)';
-            textContainer.style.color = 'rgb(255,255,255)';
+            textContainer.style.color = '';
         });
     });
 
@@ -38,8 +37,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 return '#ff214f'; // Pink 
             case 'hoverGradient1':
                 return 'rgb(1, 38, 248)'; // Blue 
+         case 'hoverGradient2':
+                    return  'rgb(137, 1, 248)';
             default:
-                return 'rgb(255,255,255)';
+                return '';
         }
     }
 });
@@ -63,11 +64,15 @@ document.addEventListener('mousemove', (event) => {
 
 
 
+/* animação circulo */
+
 const circleSvg = document.getElementById('circle-svg');
 const portfolioImage = document.querySelector('.portfolio_png');
 const behanceImage = document.querySelector('.behance_png');
 const behanceText = document.querySelector('.behance-text');
 const portfolioText = document.querySelector('.portfolio-text');
+const linkedinImage = document.querySelector('.linkedin_png');
+const linkedinText = document.querySelector('.linkedin-text');
 
 let mouseX = 0;
 let mouseY = 0;
@@ -79,6 +84,7 @@ portfolioImage.addEventListener('mouseenter', () => {
 
     // Hide the Behance text on Portfolio image hover
     behanceText.style.display = 'none';
+    linkedinText.style.display= 'none';
 });
 
 portfolioImage.addEventListener('mouseleave', () => {
@@ -94,6 +100,7 @@ behanceImage.addEventListener('mouseenter', () => {
 
     // Hide the Portfolio text on Behance image hover
     portfolioText.style.display = 'none';
+    linkedinText.style.display= 'none';
 });
 
 behanceImage.addEventListener('mouseleave', () => {
@@ -101,6 +108,24 @@ behanceImage.addEventListener('mouseleave', () => {
     behanceText.style.display = 'none';
     circleSvg.style.display = 'none';
 });
+
+
+linkedinImage.addEventListener('mouseenter', () => {
+    // Show the Behance text and SVG on Behance image hover
+    linkedinText.style.display = 'block';
+    circleSvg.style.display = 'block';
+
+    // Hide the Portfolio text on Behance image hover
+    portfolioText.style.display = 'none';
+    behanceText.style.display = 'none';
+});
+
+linkedinImage.addEventListener('mouseleave', () => {
+    // Hide the Behance text and SVG on Behance image mouseout
+    linkedinText.style.display = 'none';
+    circleSvg.style.display = 'none';
+});
+
 
 window.addEventListener('mousemove', (event) => {
     // Update mouse coordinates
