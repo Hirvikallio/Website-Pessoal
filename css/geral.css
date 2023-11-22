@@ -52,9 +52,9 @@ text {
 }
 
 
-h1 {
 
-  margin-top: 5%;
+h1 {
+  padding-top: 2%;
   margin-left: 4%;
   font-family: "Monument Extended Bold";
   color: white;
@@ -68,6 +68,25 @@ h1 {
 }
 
 
+#canvas {
+  /* make the canvas wrapper fit the window */
+  position: absolute;
+  top: 0;
+  left: 6%;
+  width: 100%;
+  height: 100vh;
+  z-index: -2; /* Set a higher z-index for the canvas */
+}
+
+.plane {
+  /* define the size of your plane */
+  
+  width: 86%;
+  height: 80vh;
+  margin-left: 4%;
+  top: 4vh;
+
+}
 
 .text-container {
   width: 43%;
@@ -78,6 +97,7 @@ h1 {
   font-family: 'Jost', sans-serif;
   font-size: 1.3rem;
   margin-left: 13%;
+  z-index: 1;
 }
 
 
@@ -103,6 +123,7 @@ body:hover::before {
     top: var(--y);
 }   */
 
+/* fades do texto colorido */
 
 * {
   transition-timing-function: ease-in-out;
@@ -224,7 +245,7 @@ body:hover::before {
   .text-container {
     width: 43%;
   }
-  
+
 
   .gradient {
     width: 150px;
@@ -258,6 +279,7 @@ body:hover::before {
     font-family: 'Jost', sans-serif;
     font-size: 1.3rem;
     margin-left: 13%;
+    z-index: 1;
   }
 
 
@@ -287,6 +309,7 @@ body:hover::before {
     left: 4%;
 
   }
+
   .gradient {
     width: 150px;
     height: 150px;
@@ -320,7 +343,7 @@ body:hover::before {
   .text-container p {
     text-align: left;
     font-size: 1rem;
-    margin-left: 13%;
+    z-index: 1;
   }
 
 

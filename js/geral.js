@@ -140,3 +140,4 @@ window.addEventListener('mousemove', (event) => {
 // Optional: Hide the SVG initially
 circleSvg.style.display = 'none';
 
+
