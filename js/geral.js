@@ -8,6 +8,7 @@ document.addEventListener('mousemove', function (e) {
 });   */
 
 
+/* ------------------------------------------------------------------ mouse:hover gradiente aumenta */
 document.addEventListener('DOMContentLoaded', function () {
     const gradients = document.querySelectorAll('.gradient');
     const textContainer = document.querySelector('.text-container');
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    /* mudar cor do texto */
+    /*--------------------------------------------------- mudar cor do texto consoante gradiente */
     function getTextColor(gradientId) {
         switch (gradientId) {
             case 'hoverGradient':
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-/* gradiente grande background  */
+/*--------------------------------------------------------- gradiente grande background  */
 document.addEventListener('mousemove', (event) => {
     windowWidth = window.innerWidth;
     windowHeight = window.innerHeight;
@@ -64,7 +65,7 @@ document.addEventListener('mousemove', (event) => {
 
 
 
-/* animação circulo */
+/*--------------------------------------------------------------- animação circulo */
 
 const circleSvg = document.getElementById('circle-svg');
 const portfolioImage = document.querySelector('.portfolio_png');
@@ -78,17 +79,17 @@ let mouseX = 0;
 let mouseY = 0;
 
 portfolioImage.addEventListener('mouseenter', () => {
-    // Show the Portfolio text and SVG on Portfolio image hover
+    // mostrar portfolio image
     portfolioText.style.display = 'block';
     circleSvg.style.display = 'block';
 
-    // Hide the Behance text on Portfolio image hover
+    // esconder portfolio image
     behanceText.style.display = 'none';
     linkedinText.style.display= 'none';
 });
 
 portfolioImage.addEventListener('mouseleave', () => {
-    // Hide the Portfolio text and SVG on Portfolio image mouseout
+    // esconder portfolio image
     portfolioText.style.display = 'none';
     circleSvg.style.display = 'none';
 });
@@ -139,5 +140,17 @@ window.addEventListener('mousemove', (event) => {
 
 // Optional: Hide the SVG initially
 circleSvg.style.display = 'none';
+
+
+
+
+
+
+
+
+
+
+
+
 
 
