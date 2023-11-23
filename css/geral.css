@@ -9,12 +9,14 @@ body {
 
 
 svg {
-  width: 170px;
+  width: 150px;
   position: absolute;
   animation: rotation 4.5s infinite linear;
   pointer-events: none;
   transition-timing-function: ease-out;
   z-index: 1;
+
+
 }
 
 #circle-svg {
@@ -142,8 +144,8 @@ body:hover::before {
 /*---------------------------- socials----------------------- */
 .portfolio_png {
   position: absolute;
-  top: 35.5%;
-  left: 52.5%;
+  top: 36.5%;
+  left: 53.5%;
   width: 70px;
   height: 70px;
   transition: transform 0.3s ease;
@@ -152,8 +154,8 @@ body:hover::before {
 
 .behance_png {
   position: absolute;
-  top: 32%;
-  left: 82.5%;
+  top: 29%;
+  left: 78.5%;
   width: 75px;
   height: 45px;
   transition: transform 0.3s ease;
@@ -162,8 +164,8 @@ body:hover::before {
 
 .linkedin_png {
   position: absolute;
-  top: 72%;
-  left: 73%;
+  top: 67%;
+  left: 71.5%;
   width: 70px;
   height: 70px;
   transition: transform 0.3s ease;
@@ -181,6 +183,8 @@ body:hover::before {
 }
 
 
+/* gradientes */
+
 .gradient {
   --size: 0;
   content: '';
@@ -190,7 +194,7 @@ body:hover::before {
   left: 50%;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle closest-side, rgb(235, 58, 87), transparent);
+  background: radial-gradient(circle closest-side, rgb(253, 64, 96), transparent);
   transition: transform 0.3s ease;
   z-index: 0;
 }
@@ -201,7 +205,7 @@ body:hover::before {
   left: 80%;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle closest-side, rgb(1, 38, 248), transparent);
+  background: radial-gradient(circle closest-side, rgb(51, 221, 255), transparent);
 
 }
 
@@ -210,7 +214,7 @@ body:hover::before {
   left: 70%;
   width: 150px;
   height: 150px;
-  background: radial-gradient(circle closest-side, rgb(137, 1, 248), transparent);
+  background: radial-gradient(circle closest-side, rgb(178, 87, 253), transparent);
 
 }
 
@@ -222,23 +226,23 @@ body:hover::before {
 
 @media screen and (min-width: 980px) {
   .portfolio_png {
-    top: 35.5%;
-    left: 52.5%;
+    top: 36.5%;
+    left: 53.5%;
   }
 
   .behance_png {
-    top: 32%;
-    left: 82.5%;
+    top: 29%;
+    left: 78.5%;
   }
 
   .linkedin_png {
-    top: 72%;
-    left: 73%;
+    top: 67%;
+    left: 71.5%;
   }
 
   .email_png {
-    top: 84%;
-    left: 4%;
+    top: 87%;
+    left: 4.5%;
 
   }
 
@@ -248,27 +252,28 @@ body:hover::before {
 
 
   .gradient {
-    width: 150px;
-    height: 150px;
+    width: 175px;
+    height: 175px;
     top: 30%;
     left: 50%;
   }
 
   #hoverGradient1 {
-    width: 150px;
-    height: 150px;
-    top: 25%;
-    left: 80%;
+    width: 175px;
+    height: 175px;
+    top: 20%;
+    left: 75%;
   }
 
   #hoverGradient2 {
-    width: 150px;
-    height: 150px;
-    top: 67%;
-    left: 70%;
+    width: 175px;
+    height: 175px;
+    top: 60%;
+    left: 68%;
   }
 
   h1 {
+    padding-top: 2%;
     margin-left: 4%;
     font-size: 5rem;
   }
@@ -286,49 +291,62 @@ body:hover::before {
 }
 
 
+/*tablet */
+
 @media screen and (min-width: 600px) and (max-width: 980px) {
 
   .portfolio_png {
-    top: 48%;
-    left: 61%;
+    top: 42%;
+    left: 57.5%;
+    width: 60px;
+    height: 60px;
   }
 
   .behance_png {
-    top: 22%;
-    left: 79%;
+    top: 20%;
+    left: 70.5%;
+    width: 65px;
+    height: 37px;
+  
   }
 
   .linkedin_png {
-    top: 77%;
-    left: 44%;
+    top: 68.5%;
+    left: 46.5%;
+    width: 60px;
+    height: 60px;
   }
 
 
   .email_png {
-    top: 84%;
-    left: 4%;
+    top: 86%;
+    left: 3.5%;
 
   }
 
   .gradient {
     width: 150px;
     height: 150px;
-    top: 43%;
-    left: 56%;
+    top: 36%;
+    left: 52%;
   }
 
   #hoverGradient1 {
     width: 150px;
     height: 150px;
-    top: 15%;
-    left: 74%;
+    top: 12%;
+    left: 65%;
   }
 
   #hoverGradient2 {
     width: 150px;
     height: 150px;
-    top: 72%;
-    left: 38%;
+    top: 63%;
+    left: 41%;
+  }
+
+  svg {
+    width: 136px;
   }
 
   h1 {
@@ -350,63 +368,77 @@ body:hover::before {
 }
 
 
+/* telemovel */
+
 @media screen and (max-width: 600px) {
   h1 {
-    font-size: 3rem;
+    padding-top: 5%;
+    font-size: 2.8rem;
     margin-left: 6%;
   }
 
   .text-container {
-    width: 59%;
+    width: 58%;
   }
 
   .text-container p {
-    text-align: left;
     font-size: 1rem;
     margin-left: 13%;
   }
 
 
   .portfolio_png {
-    top: 54%;
-    left: 71%;
+    top: 44%;
+    left: 65%;
+    width: 60px;
+    height: 60px;
   }
 
   .behance_png {
-    top: 22%;
-    left: 71%;
+    top: 20%;
+    left: 65%;
+    width: 65px;
+    height: 37px;
+  
   }
 
   .linkedin_png {
-    top: 77%;
-    left: 31%;
+    top: 68.5%;
+    left: 65.5%;
+    width: 60px;
+    height: 60px;
   }
 
+
   .email_png {
-    top: 84%;
-    left: 74%;
+    top: 86%;
+    left: 2%;
 
   }
 
   .gradient {
     width: 150px;
     height: 150px;
-    top: 49%;
-    left: 64%;
+    top: 38%;
+    left: 56%;
   }
 
   #hoverGradient1 {
     width: 150px;
     height: 150px;
-    top: 15%;
-    left: 64%;
+    top: 12%;
+    left: 56%;
   }
 
   #hoverGradient2 {
     width: 150px;
     height: 150px;
-    top: 72%;
-    left: 23%;
+    top: 63%;
+    left: 56%;
+  }
+
+  svg {
+    width: 134px;
   }
 
 }

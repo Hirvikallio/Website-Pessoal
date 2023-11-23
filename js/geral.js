@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function getTextColor(gradientId) {
         switch (gradientId) {
             case 'hoverGradient':
-                return '#ff214f'; // Pink 
+                return 'rgb(253, 64, 96)'; // rosa
             case 'hoverGradient1':
-                return 'rgb(1, 38, 248)'; // Blue 
+                return 'rgb(51, 221, 255)'; // azul 
          case 'hoverGradient2':
-                    return  'rgb(137, 1, 248)';
+                    return  'rgb(178, 87, 253)';  // roxo
             default:
                 return '';
         }
@@ -59,7 +59,7 @@ document.addEventListener('mousemove', (event) => {
         mouseXpercentage +
         '% ' +
         mouseYpercentage +
-        '%, #c6c6c6, #919191, #5e5e5e, #303030, #000000)';
+        '%, #c6c6c6, #919191,#303030, #000000)';
 });
 
 
