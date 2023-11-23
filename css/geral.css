@@ -165,7 +165,7 @@ body:hover::before {
 
 .linkedin_png {
   position: absolute;
-  top: 67%;
+  top: 65%;
   left: 71.5%;
   width: 70px;
   height: 70px;
@@ -211,7 +211,7 @@ body:hover::before {
 }
 
 #hoverGradient2 {
-  top: 67%;
+  top: 58%;
   left: 70%;
   width: 150px;
   height: 150px;
@@ -237,7 +237,7 @@ body:hover::before {
   }
 
   .linkedin_png {
-    top: 67%;
+    top: 65%;
     left: 71.5%;
   }
 
@@ -269,7 +269,7 @@ body:hover::before {
   #hoverGradient2 {
     width: 175px;
     height: 175px;
-    top: 60%;
+    top: 58%;
     left: 68%;
   }
 
