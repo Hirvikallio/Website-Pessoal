@@ -232,7 +232,10 @@ body:hover::before {
 }
 
 
-
+.plane img {
+  /* hide the img element */
+  display: none;
+}
 
 /* ------------------------------------------------media queries */
 
@@ -288,8 +291,12 @@ body:hover::before {
     padding-top: 2%;
     margin-left: 4%;
     font-size: 4.7rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
+  h1:hover {
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+  }
 
   .text-container p {
     text-align: left;
