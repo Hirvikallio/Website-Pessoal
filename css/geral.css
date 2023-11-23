@@ -98,6 +98,7 @@ h1 {
   text-align: left;
   font-family: 'Jost', sans-serif;
   font-size: 1.3rem;
+  margin-top: -30px;
   margin-left: 13%;
   z-index: 1;
 }
@@ -275,15 +276,17 @@ body:hover::before {
   h1 {
     padding-top: 2%;
     margin-left: 4%;
-    font-size: 5rem;
+    font-size: 4.7rem;
   }
 
 
   .text-container p {
     text-align: left;
     font-family: 'Jost', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-left: 13%;
+    width: 97%;
+    margin-top: -15px;
     z-index: 1;
   }
 
@@ -359,9 +362,13 @@ body:hover::before {
   }
 
   .text-container p {
+    margin-top: -15px;
     text-align: left;
     font-size: 1rem;
     z-index: 1;
+
+
+   
   }
 
 
@@ -382,7 +389,8 @@ body:hover::before {
   }
 
   .text-container p {
-    font-size: 1rem;
+    margin-top: -15px;
+    font-size: 0.9rem;
     margin-left: 13%;
   }
 
