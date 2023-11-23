@@ -85,14 +85,6 @@ h1 {
   top: 4vh;
 }
 
-.text-canvas {
-  visibility: hidden;
-  font-family: var(--altero);
-  font-weight: bold;
-  font-size: calc(9/16 * 7vw);
-}
-
-
 
 .text-container {
   width: 43%;
@@ -270,7 +262,6 @@ body:hover::before {
   .text-container {
     width: 43%;
   }
-
 
   .gradient {
     width: 175px;
