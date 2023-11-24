@@ -80,7 +80,7 @@ h1 {
 
 .plane {
   width: 86%;
-  height: 80vh;
+  height: 83vh;
   margin-left: 4%;
   top: 4vh;
 }
@@ -231,12 +231,6 @@ body:hover::before {
 
 }
 
-
-.plane img {
-  /* hide the img element */
-  display: none;
-}
-
 /* ------------------------------------------------media queries */
 
 
@@ -295,8 +289,9 @@ body:hover::before {
   }
 
   h1:hover {
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+    text-shadow: 4px 4px 6px rgba(103, 103, 103, 0.8);
   }
+  
 
   .text-container p {
     text-align: left;

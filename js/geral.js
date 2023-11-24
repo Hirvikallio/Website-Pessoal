@@ -79,66 +79,65 @@ let mouseX = 0;
 let mouseY = 0;
 
 portfolioImage.addEventListener('mouseenter', () => {
-    // mostrar portfolio image
+
     portfolioText.style.display = 'block';
     circleSvg.style.display = 'block';
 
-    // esconder portfolio image
+ 
     behanceText.style.display = 'none';
     linkedinText.style.display= 'none';
 });
 
 portfolioImage.addEventListener('mouseleave', () => {
-    // esconder portfolio image
+
     portfolioText.style.display = 'none';
     circleSvg.style.display = 'none';
 });
 
 behanceImage.addEventListener('mouseenter', () => {
-    // Show the Behance text and SVG on Behance image hover
+
     behanceText.style.display = 'block';
     circleSvg.style.display = 'block';
 
-    // Hide the Portfolio text on Behance image hover
+ 
     portfolioText.style.display = 'none';
     linkedinText.style.display= 'none';
 });
 
 behanceImage.addEventListener('mouseleave', () => {
-    // Hide the Behance text and SVG on Behance image mouseout
+  
     behanceText.style.display = 'none';
     circleSvg.style.display = 'none';
 });
 
 
 linkedinImage.addEventListener('mouseenter', () => {
-    // Show the Behance text and SVG on Behance image hover
+
     linkedinText.style.display = 'block';
     circleSvg.style.display = 'block';
 
-    // Hide the Portfolio text on Behance image hover
     portfolioText.style.display = 'none';
     behanceText.style.display = 'none';
 });
 
 linkedinImage.addEventListener('mouseleave', () => {
-    // Hide the Behance text and SVG on Behance image mouseout
+ 
     linkedinText.style.display = 'none';
     circleSvg.style.display = 'none';
 });
 
 
 window.addEventListener('mousemove', (event) => {
-    // Update mouse coordinates
+
     mouseY = (event.clientY / 16) - (45 / 10) + 'rem';
     mouseX = (event.clientX / 16) - (45 / 10) + 'rem';
 
-    // Update SVG position
+
     circleSvg.style.top = mouseY;
     circleSvg.style.left = mouseX;
 });
 
-// Optional: Hide the SVG initially
+// esconder svg inicialmente
 circleSvg.style.display = 'none';
 
 

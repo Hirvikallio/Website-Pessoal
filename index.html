@@ -13,10 +13,16 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="css/geral.css" rel="stylesheet">
+    <link rel="shortcut icon" type="icons/png" href="icons/portfolio.png">
+
 
 </head>
 
 <body>
+
+
+       <!------------------------------Frases circulo animado--------------------------------------->
+
     <svg id="circle-svg" xmlns="http://www.w3.org/2000/svg" xml:lang="en" xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 0 500 500">
 
@@ -46,14 +52,12 @@
 
     
 
-    <!-- div that will hold our WebGL canvas -->
+    <!-----------------------------------------WebGL canvas ---------------------------------------->
     <div id="canvas"></div>
 
     
     <div class="plane">
-
         <h1 id="title" class="color-changing-text animate__animated animate__flash">Carolina <br> Simões</h1>
-        <img width="200" height="200" src="icons/fundo.jpg" crossorigin="anonymous" />
         
         <div class="text-container">
 
@@ -63,7 +67,6 @@
                 Multimedia at the University of Coimbra. I really enjoy graphic design and design in general, and
                 besides
                 university i love taking photos, listening to music, and going for walks.
-    
     
                 Explore the page and get to know me a bit better and check out my work. Feel free to contact me anytime!
     
@@ -100,12 +103,14 @@
         </div>
     </div>
 
+    <!----------------------------------------- Gradientes ---------------------------------------->
 
     <div class="gradient animate__animated animate__flash " id="hoverGradient"></div>
     <div class="gradient animate__animated animate__flash" id="hoverGradient1"></div>
     <div class="gradient animate__animated animate__flash" id="hoverGradient2"></div>
 
 
+      <!----------------------------------------- Script para curtain.js ---------------------------------------->
 
     <script id="plane-vs" type="x-shader/x-vertex">
         #ifdef GL_ES
@@ -162,6 +167,7 @@
             vVertexPosition = vertexPosition;
         }
           </script>
+
     <script id="plane-fs" type="x-shader/x-fragment">
         #ifdef GL_ES
         precision mediump float;
@@ -196,8 +202,6 @@
 
 
     <script src="https://www.curtainsjs.com/build/curtains.min.js" type="text/javascript"></script>
-
-
     <script src="js/geral.js"></script>
     <script src="js/curtains.js"></script>
 </body>
