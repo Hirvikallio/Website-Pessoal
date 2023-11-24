@@ -171,7 +171,7 @@ body:hover::before {
 
 .email_png {
   position: absolute;
-  top: 10%;
+  top: 88%;
   left: 35%;
   width: 100px;
   height: 100px;
@@ -251,7 +251,7 @@ body:hover::before {
   }
 
   .email_png {
-    top: 87%;
+    top: 88%;
     left: 4.5%;
 
   }
